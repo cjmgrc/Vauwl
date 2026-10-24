@@ -1,0 +1,33 @@
+/* Light is the default; dark applies via <html data-theme="dark"> */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: #f3f2ee;
+  --color-surface: #fbfaf7;
+  --color-surface-hover: #ebeae4;
+  --color-border: #dfddd4;
+  --color-text: #262b29;
+  --color-text-muted: #5d6662;
+  --color-accent: #5f8a73;      /* sage */
+  --color-accent-soft: #d6ebe0; /* mint */
+  --color-on-accent: #ffffff;
+  --color-focus: #3f7a5c;
+  --shadow-sm: 0 1px 2px rgb(38 43 41 / 0.08);
+  --shadow-md: 0 4px 14px rgb(38 43 41 / 0.08);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #151817;
+  --color-surface: #1d211f;
+  --color-surface-hover: #272c29;
+  --color-border: #333a36;
+  --color-text: #e6ebe8;
+  --color-text-muted: #9aa5a0;
+  --color-accent: #8fc2a6;
+  --color-accent-soft: #263a30;
+  --color-on-accent: #11231a;
+  --color-focus: #a8dcc0;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 4px 14px rgb(0 0 0 / 0.35);
+}
