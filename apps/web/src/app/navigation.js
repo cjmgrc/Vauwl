@@ -1,24 +1,25 @@
 import {
-  LayoutDashboard,
-  Package,
-  FileText,
-  Share2,
-  Search,
-  Zap,
-  TrendingUp,
-  Bell,
-  Settings,
+  CalendarDays, FileText, LayoutDashboard, Package, Settings, Share2, Sparkles, TrendingUp, Zap,
 } from 'lucide-react'
 
-// Single source of truth for the sidebar and the router.
 export const navigation = [
-  { to: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { to: '/inventory', label: 'Inventory', icon: Package },
-  { to: '/documents', label: 'Documents', icon: FileText },
-  { to: '/reminders', label: 'Reminders', icon: Bell },
+  { to: '/', label: 'Overview', icon: LayoutDashboard },
+  { to: '/inventory', label: 'My Inventory', icon: Package },
   { to: '/life-graph', label: 'LifeGraph', icon: Share2 },
-  { to: '/life-query', label: 'LifeQuery', icon: Search },
+  { to: '/life-query', label: 'LifeQuery', icon: Sparkles },
   { to: '/automations', label: 'Automations', icon: Zap },
-  { to: '/analytics', label: 'TrueCost', icon: TrendingUp },
+  { to: '/truecost', label: 'TrueCost', icon: TrendingUp },
+  { to: '/documents', label: 'Documents', icon: FileText },
+  { to: '/timeline', label: 'Timeline', icon: CalendarDays },
+]
+
+// Reached from the "More" sheet on phones
+export const moreLinks = [
+  ...navigation.filter((item) => ['/automations', '/truecost', '/documents', '/timeline'].includes(item.to)),
   { to: '/settings', label: 'Settings', icon: Settings },
 ]
+
+export const titleFor = (pathname) =>
+  [...navigation, { to: '/settings', label: 'Settings' }].find((item) =>
+    item.to === '/' ? pathname === '/' : pathname.startsWith(item.to)
+  )?.label ?? 'Vauwl'

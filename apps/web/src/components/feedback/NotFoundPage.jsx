@@ -1,15 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Button from '@/components/ui/Button'
+import EmptyState from '@/components/ui/EmptyState'
+import { SearchX } from 'lucide-react'
 
 const NotFoundPage = () => {
   return (
-    <section>
-      <h1>Page not found</h1>
-      <p className="muted">
-        The page you’re looking for doesn’t exist or has moved.{' '}
-        <Link to="/">Go to the dashboard</Link>
-      </p>
-    </section>
+    <EmptyState
+      icon={SearchX}
+      title="Page not found"
+      description="The page you’re looking for doesn’t exist or has moved."
+      action={<Button variant="primary" to="/">Go to overview</Button>}
+    />
   )
 }
 

@@ -2,14 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="768x768" href="/vauwl-logo.png" />
+    <link rel="apple-touch-icon" href="/vauwl-logo.png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E4E7EA" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0E1013" />
     <meta name="description" content="Vauwl: your life, remembered." />
     <title>Vauwl</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <!-- Set the theme before first paint to avoid a light/dark flash -->
@@ -21,7 +28,7 @@
           document.documentElement.dataset.theme =
             pref === 'system' ? (dark ? 'dark' : 'light') : pref;
         } catch (e) {
-          document.documentElement.dataset.theme = 'light';
+          document.documentElement.dataset.theme = 'dark';
         }
       })();
     </script>

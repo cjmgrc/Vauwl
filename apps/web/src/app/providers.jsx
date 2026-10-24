@@ -17,9 +17,7 @@ const Providers = ({ children }) => {
     return () => media.removeEventListener('change', onChange)
   }, [preference])
 
-  return (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-  )
+  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
 }
 
 export default Providers

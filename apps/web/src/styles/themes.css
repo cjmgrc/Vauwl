@@ -1,33 +1,75 @@
-/* Light is the default; dark applies via <html data-theme="dark"> */
+/*
+  Metal owl: gunmetal and brushed steel, with one amber accent (the owl's eyes).
+  Amber is reserved for the primary action, the active state, and data highlights.
+*/
 :root,
 :root[data-theme='light'] {
   color-scheme: light;
-  --color-bg: #f3f2ee;
-  --color-surface: #fbfaf7;
-  --color-surface-hover: #ebeae4;
-  --color-border: #dfddd4;
-  --color-text: #262b29;
-  --color-text-muted: #5d6662;
-  --color-accent: #5f8a73;      /* sage */
-  --color-accent-soft: #d6ebe0; /* mint */
-  --color-on-accent: #ffffff;
-  --color-focus: #3f7a5c;
-  --shadow-sm: 0 1px 2px rgb(38 43 41 / 0.08);
-  --shadow-md: 0 4px 14px rgb(38 43 41 / 0.08);
+  --color-bg: #e4e7ea;
+  --color-surface: #f3f4f6;
+  --color-surface-2: #eaecef;
+  --color-hover: #dfe2e6;
+  --color-border: #c8cdd3;
+  --color-border-strong: #aeb5bd;
+  --color-text: #14181c;
+  --color-text-muted: #525c66;
+  --color-primary: #e3a72f;
+  --color-primary-hover: #edb544;
+  --color-on-primary: #17120a;
+  --color-accent-text: #8a5a00;
+  --color-focus: #a86f00;
+  --color-ok: #2a7352;
+  --color-ok-soft: rgb(42 115 82 / 0.14);
+  --color-warn: #8a5a00;
+  --color-warn-soft: rgb(227 167 47 / 0.22);
+  --color-danger: #b0382f;
+  --color-danger-soft: rgb(176 56 47 / 0.12);
+  --color-info: #3f5163;
+  --color-info-soft: rgb(63 81 99 / 0.12);
+  --color-overlay: rgb(14 17 20 / 0.5);
+  --color-glass: color-mix(in srgb, var(--color-surface) 80%, transparent);
+  --steel: #3a4550;
+  --steel-text: #eef1f3;
+  --chart-1: #d6962a;
+  --chart-2: #5f6d7a;
+  --chart-3: #a3acb5;
+  --edge: inset 0 1px 0 rgb(255 255 255 / 0.6);
+  --shadow-overlay: 0 14px 40px rgb(20 24 28 / 0.25);
 }
 
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --color-bg: #151817;
-  --color-surface: #1d211f;
-  --color-surface-hover: #272c29;
-  --color-border: #333a36;
-  --color-text: #e6ebe8;
-  --color-text-muted: #9aa5a0;
-  --color-accent: #8fc2a6;
-  --color-accent-soft: #263a30;
-  --color-on-accent: #11231a;
-  --color-focus: #a8dcc0;
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-  --shadow-md: 0 4px 14px rgb(0 0 0 / 0.35);
+  --color-bg: #0e1013;
+  --color-surface: #15181c;
+  --color-surface-2: #1b1f24;
+  --color-hover: #232830;
+  --color-border: #2a3037;
+  --color-border-strong: #3a424b;
+  --color-text: #e8eaed;
+  --color-text-muted: #8f99a4;
+  --color-primary: #e3a72f;
+  --color-primary-hover: #efbb4b;
+  --color-on-primary: #17120a;
+  --color-accent-text: #f0bb4a;
+  --color-focus: #f0bb4a;
+  --color-ok: #5db48c;
+  --color-ok-soft: rgb(93 180 140 / 0.15);
+  --color-warn: #f0bb4a;
+  --color-warn-soft: rgb(240 187 74 / 0.15);
+  --color-danger: #e07a70;
+  --color-danger-soft: rgb(224 122 112 / 0.15);
+  --color-info: #9bb0c4;
+  --color-info-soft: rgb(155 176 196 / 0.14);
+  --color-overlay: rgb(4 5 6 / 0.65);
+  --steel: #aab6c2;
+  --steel-text: #14181c;
+  --chart-1: #e3a72f;
+  --chart-2: #8fa6bc;
+  --chart-3: #4a5560;
+  --edge: inset 0 1px 0 rgb(255 255 255 / 0.05);
+  --shadow-overlay: 0 14px 40px rgb(0 0 0 / 0.55);
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  :root { --color-glass: var(--color-surface); }
 }

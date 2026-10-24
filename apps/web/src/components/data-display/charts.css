@@ -1,0 +1,10 @@
+.thumb {
+  display: grid; place-items: center; flex: none; width: var(--thumb, 44px); height: var(--thumb, 44px);
+  background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-md); color: var(--color-text-muted);
+}
+.linechart { margin: 0; }
+.linechart svg { width: 100%; height: auto; }
+.linechart__readout { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); align-items: center; margin-top: var(--space-3); font-size: var(--text-sm); }
+.linechart__value { display: inline-flex; align-items: center; gap: var(--space-2); color: var(--color-text-muted); }
+.linechart__value i { width: 0.625rem; height: 0.625rem; border-radius: 50%; }
+.linechart__value b { color: var(--color-text); }

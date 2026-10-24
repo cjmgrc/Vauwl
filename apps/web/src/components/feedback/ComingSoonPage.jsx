@@ -1,11 +1,11 @@
 import React from 'react'
+import PageHeader from '@/components/ui/PageHeader'
 
 const ComingSoonPage = ({ title }) => {
   return (
-    <section>
-      <h1>{title}</h1>
-      <p className="muted">This section isn’t built yet.</p>
-    </section>
+    <>
+      <PageHeader title={title} description="This section isn’t built yet." />
+    </>
   )
 }
 
