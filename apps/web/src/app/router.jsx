@@ -1,4 +1,3 @@
-import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import RequireAuth from '@/components/layout/RequireAuth'
 import AppLayout from '@/components/layout/AppLayout'
@@ -13,6 +12,7 @@ import LifeQueryPage from '@/features/life-query/pages/LifeQueryPage'
 import AutomationsPage from '@/features/automations/pages/AutomationsPage'
 import TrueCostPage from '@/features/analytics/pages/TrueCostPage'
 import DocumentsPage from '@/features/documents/pages/DocumentsPage'
+import SettingsPage from '@/features/settings/pages/SettingsPage'
 
 export const router = createBrowserRouter([
   { path: '/login', element: <LoginPage /> },
@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
           { path: 'truecost', element: <TrueCostPage /> },
           { path: 'documents', element: <DocumentsPage /> },
           { path: 'timeline', element: <ComingSoonPage title="Timeline" /> },
-          { path: 'settings', element: <ComingSoonPage title="Settings" /> },
+          { path: 'settings', element: <SettingsPage /> },
           { path: '*', element: <NotFoundPage /> },
         ],
       },

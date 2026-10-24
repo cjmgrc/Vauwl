@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Check } from 'lucide-react'
 
 /*
@@ -121,7 +122,7 @@ const Dropdown = ({
         {trigger}
       </button>
 
-      {open && (
+      {open && createPortal(
         <div
           ref={menuRef}
           id={menuId}
@@ -155,7 +156,8 @@ const Dropdown = ({
               </button>
             )
           })}
-        </div>
+        </div>,
+        document.body,
       )}
     </>
   )

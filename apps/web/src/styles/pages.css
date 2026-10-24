@@ -1,4 +1,33 @@
 /* Shared page pieces */
+.settings-page { display: grid; gap: var(--space-5); max-width: 52rem; }
+.settings-page > .page-header { margin-bottom: 0; }
+.settings-section { overflow: hidden; }
+.settings-section__heading { display: flex; align-items: center; gap: var(--space-3); }
+.settings-section__heading p { margin-top: var(--space-1); }
+.settings-section__icon, .settings-theme__icon {
+  display: grid; place-items: center; flex: none; width: 2.5rem; height: 2.5rem;
+  border-radius: var(--radius-md); background: var(--color-surface-2); color: var(--color-accent-text);
+}
+.settings-account { display: flex; align-items: center; gap: var(--space-3); padding: 0 var(--space-5) var(--space-5); }
+.settings-account__avatar { width: 2.75rem; height: 2.75rem; font-size: var(--text-sm); }
+.settings-account__details { display: grid; gap: 2px; min-width: 0; }
+.settings-account__details strong { font-size: var(--text-sm); }
+.settings-account__details span { overflow-wrap: anywhere; font-size: var(--text-sm); }
+.settings-themes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); padding: 0 var(--space-5) var(--space-5); }
+.settings-theme {
+  display: flex; align-items: flex-start; gap: var(--space-3); min-width: 0; padding: var(--space-3);
+  background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: var(--radius-md);
+  text-align: left; transition: border-color 120ms var(--ease-out), background-color 120ms var(--ease-out);
+}
+.settings-theme[aria-pressed='true'] { border-color: var(--color-accent-text); box-shadow: 0 0 0 1px var(--color-accent-text); }
+.settings-theme__icon { width: 2.25rem; height: 2.25rem; }
+.settings-theme__copy { display: grid; gap: var(--space-1); flex: 1; min-width: 0; }
+.settings-theme__copy strong { font-size: var(--text-sm); }
+.settings-theme__copy small { font-size: var(--text-xs); line-height: 1.4; }
+.settings-theme__radio { display: grid; place-items: center; flex: none; width: 1rem; height: 1rem; margin-top: 0.125rem; border: 1px solid var(--color-border-strong); border-radius: 50%; }
+.settings-theme[aria-pressed='true'] .settings-theme__radio { border: 5px solid var(--color-accent-text); }
+@media (max-width: 640px) { .settings-themes { grid-template-columns: minmax(0, 1fr); } }
+
 .page-header { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4); margin-bottom: var(--space-5); }
 .page-header__text { display: grid; gap: var(--space-2); min-width: 0; }
 .page-header__text p { max-width: 60ch; }
