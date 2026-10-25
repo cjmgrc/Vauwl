@@ -1,75 +1,119 @@
 /*
-  Metal owl: gunmetal and brushed steel, with one amber accent (the owl's eyes).
-  Amber is reserved for the primary action, the active state, and data highlights.
+  Vauwl color palette
+  Inspired by the owl logo: dark steel, warm amber, ivory, and silver.
 */
+
 :root,
 :root[data-theme='light'] {
   color-scheme: light;
-  --color-bg: #e4e7ea;
-  --color-surface: #f3f4f6;
-  --color-surface-2: #eaecef;
-  --color-hover: #dfe2e6;
-  --color-border: #c8cdd3;
-  --color-border-strong: #aeb5bd;
-  --color-text: #14181c;
-  --color-text-muted: #525c66;
-  --color-primary: #e3a72f;
-  --color-primary-hover: #edb544;
-  --color-on-primary: #17120a;
-  --color-accent-text: #8a5a00;
-  --color-focus: #a86f00;
-  --color-ok: #2a7352;
-  --color-ok-soft: rgb(42 115 82 / 0.14);
-  --color-warn: #8a5a00;
-  --color-warn-soft: rgb(227 167 47 / 0.22);
-  --color-danger: #b0382f;
-  --color-danger-soft: rgb(176 56 47 / 0.12);
-  --color-info: #3f5163;
-  --color-info-soft: rgb(63 81 99 / 0.12);
-  --color-overlay: rgb(14 17 20 / 0.5);
-  --color-glass: color-mix(in srgb, var(--color-surface) 80%, transparent);
-  --steel: #3a4550;
-  --steel-text: #eef1f3;
-  --chart-1: #d6962a;
-  --chart-2: #5f6d7a;
-  --chart-3: #a3acb5;
-  --edge: inset 0 1px 0 rgb(255 255 255 / 0.6);
-  --shadow-overlay: 0 14px 40px rgb(20 24 28 / 0.25);
+
+  /* Backgrounds and surfaces */
+  --color-bg: #f7f5f0;
+  --color-surface: #ffffff;
+  --color-surface-2: rgb(72 72 92 / 0.08);
+  --color-hover: rgb(72 72 92 / 0.12);
+
+  /* Borders */
+  --color-border: rgb(48 48 65 / 0.12);
+  --color-border-strong: rgb(48 48 65 / 0.24);
+
+  /* Typography */
+  --color-text: #242431;
+  --color-text-muted: #777682;
+
+  /* Primary: warm owl amber */
+  --color-primary: #f5a623;
+  --color-primary-hover: #dc8b0d;
+  --color-on-primary: #242431;
+  --color-accent-text: #a96708;
+  --color-focus: #e9a126;
+
+  /* Status colors */
+  --color-ok: #248a3d;
+  --color-ok-soft: rgb(52 199 89 / 0.14);
+
+  --color-warn: #a65b08;
+  --color-warn-soft: rgb(245 166 35 / 0.16);
+
+  --color-danger: #d92d3a;
+  --color-danger-soft: rgb(217 45 58 / 0.12);
+
+  --color-info: #505066;
+  --color-info-soft: rgb(72 72 92 / 0.10);
+
+  /* Overlays and glass */
+  --color-overlay: rgb(24 24 35 / 0.42);
+  --color-glass: color-mix(in srgb, #ffffff 76%, transparent);
+
+  /* Logo-inspired steel */
+  --steel: #48485c;
+  --steel-text: #ffffff;
+
+  /* Charts */
+  --chart-1: #f5a623;
+  --chart-2: #48485c;
+  --chart-3: #b9b9c4;
+
+  --edge: 0 0 0 0 transparent;
+  --shadow-overlay: 0 20px 60px rgb(36 36 49 / 0.18);
 }
 
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --color-bg: #0e1013;
-  --color-surface: #15181c;
-  --color-surface-2: #1b1f24;
-  --color-hover: #232830;
-  --color-border: #2a3037;
-  --color-border-strong: #3a424b;
-  --color-text: #e8eaed;
-  --color-text-muted: #8f99a4;
-  --color-primary: #e3a72f;
-  --color-primary-hover: #efbb4b;
-  --color-on-primary: #17120a;
-  --color-accent-text: #f0bb4a;
-  --color-focus: #f0bb4a;
-  --color-ok: #5db48c;
-  --color-ok-soft: rgb(93 180 140 / 0.15);
-  --color-warn: #f0bb4a;
-  --color-warn-soft: rgb(240 187 74 / 0.15);
-  --color-danger: #e07a70;
-  --color-danger-soft: rgb(224 122 112 / 0.15);
-  --color-info: #9bb0c4;
-  --color-info-soft: rgb(155 176 196 / 0.14);
-  --color-overlay: rgb(4 5 6 / 0.65);
-  --steel: #aab6c2;
-  --steel-text: #14181c;
-  --chart-1: #e3a72f;
-  --chart-2: #8fa6bc;
-  --chart-3: #4a5560;
-  --edge: inset 0 1px 0 rgb(255 255 255 / 0.05);
-  --shadow-overlay: 0 14px 40px rgb(0 0 0 / 0.55);
+
+  /* Backgrounds and surfaces */
+  --color-bg: #111116;
+  --color-surface: #1d1d26;
+  --color-surface-2: rgb(185 185 196 / 0.10);
+  --color-hover: rgb(185 185 196 / 0.16);
+
+  /* Borders */
+  --color-border: rgb(255 255 255 / 0.09);
+  --color-border-strong: rgb(255 255 255 / 0.17);
+
+  /* Typography */
+  --color-text: #f5f3ee;
+  --color-text-muted: #aaa9b5;
+
+  /* Primary: brighter amber for dark surfaces */
+  --color-primary: #ffb52e;
+  --color-primary-hover: #ffc45b;
+  --color-on-primary: #242431;
+  --color-accent-text: #ffc45b;
+  --color-focus: #ffbd45;
+
+  /* Status colors */
+  --color-ok: #30d158;
+  --color-ok-soft: rgb(48 209 88 / 0.15);
+
+  --color-warn: #ffb547;
+  --color-warn-soft: rgb(255 181 46 / 0.16);
+
+  --color-danger: #ff6961;
+  --color-danger-soft: rgb(255 69 58 / 0.16);
+
+  --color-info: #c0bfd0;
+  --color-info-soft: rgb(185 185 196 / 0.12);
+
+  /* Overlays and glass */
+  --color-overlay: rgb(0 0 0 / 0.65);
+  --color-glass: color-mix(in srgb, #1d1d26 72%, transparent);
+
+  /* Logo-inspired steel */
+  --steel: #b9b8ca;
+  --steel-text: #242431;
+
+  /* Charts */
+  --chart-1: #ffb52e;
+  --chart-2: #aaa9c4;
+  --chart-3: #555563;
+
+  --edge: 0 0 0 0 transparent;
+  --shadow-overlay: 0 20px 60px rgb(0 0 0 / 0.55);
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  :root { --color-glass: var(--color-surface); }
+  :root {
+    --color-glass: var(--color-surface);
+  }
 }

@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 const STORAGE_KEY = 'vauwl-theme' // keep in sync with the script in index.html
-const THEME_COLORS = { light: '#E4E7EA', dark: '#0E1013' }
+const THEME_COLORS = { light: '#F7F5F0', dark: '#111116' }
 
 const readPreference = () => {
   try {

@@ -12,22 +12,21 @@ body {
   margin: 0;
   font-family: var(--font-body);
   font-size: var(--text-base);
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--color-text);
   background: var(--color-bg);
-  transition: background-color 200ms var(--ease-out), color 200ms var(--ease-out);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  transition: background-color 250ms var(--ease-out), color 250ms var(--ease-out);
 }
 body:has(dialog[open]) { overflow: hidden; }
 
-h1, h2, h3 {
-  margin: 0;
-  font-family: var(--font-display);
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-h1 { font-size: clamp(1.75rem, 1.25rem + 2vw, 2.5rem); }
-h2 { font-size: var(--text-xl); }
-h3 { font-size: var(--text-lg); letter-spacing: -0.01em; line-height: 1.25; }
+/* Tracking tightens as type grows (iOS Large Title, Title 2, Headline) */
+h1, h2, h3 { margin: 0; font-family: var(--font-display); font-weight: 700; }
+h1 { font-size: clamp(1.875rem, 1.5rem + 1.5vw, 2.125rem); line-height: 1.12; letter-spacing: -0.026em; }
+h2 { font-size: 1.375rem; line-height: 1.2; letter-spacing: -0.02em; }
+h3 { font-size: 1.0625rem; line-height: 1.3; letter-spacing: -0.012em; font-weight: 600; }
 p { margin: 0; }
 a { color: var(--color-accent-text); }
 img, svg { display: block; max-width: 100%; }
@@ -36,7 +35,6 @@ img, svg { display: block; max-width: 100%; }
 input, textarea, select, button { font: inherit; color: inherit; }
 input, textarea, select { font-size: 16px; }
 
-/* Controls: instant taps, no accidental text selection */
 button, a, [role='button'], [role='switch'], [role='menuitem'], [role='menuitemradio'] {
   touch-action: manipulation;
   -webkit-user-select: none;
@@ -46,7 +44,7 @@ button, a, [role='button'], [role='switch'], [role='menuitem'], [role='menuitemr
 button { cursor: pointer; }
 button:disabled { cursor: not-allowed; }
 
-:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+:focus-visible { outline: 3px solid color-mix(in srgb, var(--color-focus) 55%, transparent); outline-offset: 2px; }
 
 .muted { color: var(--color-text-muted); }
 .tabular { font-variant-numeric: tabular-nums; }

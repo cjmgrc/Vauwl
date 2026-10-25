@@ -8,6 +8,7 @@ import '@/components/ui/ui.css'
 import '@/components/layout/layout.css'
 import '@/components/data-display/charts.css'
 import '@/styles/pages.css'
+import '@/styles/ios.css' // keep last: the iOS skin layers over everything above
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
