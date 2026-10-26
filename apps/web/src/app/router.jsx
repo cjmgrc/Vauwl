@@ -1,7 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import RequireAuth from '@/components/layout/RequireAuth'
 import AppLayout from '@/components/layout/AppLayout'
-import ComingSoonPage from '@/components/feedback/ComingSoonPage'
+import TimelinePage from '@/features/timeline/pages/TimelinePage'
 import NotFoundPage from '@/components/feedback/NotFoundPage'
 import LoginPage from '@/features/auth/pages/LoginPage'
 import RegisterPage from '@/features/auth/pages/RegisterPage'
@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
           { path: 'automations', element: <AutomationsPage /> },
           { path: 'truecost', element: <TrueCostPage /> },
           { path: 'documents', element: <DocumentsPage /> },
-          { path: 'timeline', element: <ComingSoonPage title="Timeline" /> },
+          { path: 'timeline', element: <TimelinePage /> },
           { path: 'settings', element: <SettingsPage /> },
           { path: '*', element: <NotFoundPage /> },
         ],

@@ -56,6 +56,23 @@ export const useAuthStore = create((set, get) => ({
     try { localStorage.setItem(KEY, JSON.stringify(user)) } catch { /* storage blocked */ }
     set({ user })
   },
+  updateProfile: ({ name, email }) => {
+    const previous = get().user
+    const user = { ...previous, name, email }
+    try { localStorage.setItem(KEY, JSON.stringify(user)) } catch { /* storage blocked */ }
+    const accounts = get().accounts.map((account) =>
+      account.email.toLowerCase() === previous.email.toLowerCase() ? user : account
+    )
+    writeAccounts(accounts)
+    set({ user, accounts })
+  },
+  deleteAccount: () => {
+    const { user } = get()
+    const accounts = get().accounts.filter((account) => account.email.toLowerCase() !== user.email.toLowerCase())
+    writeAccounts(accounts)
+    try { localStorage.removeItem(KEY) } catch { /* storage blocked */ }
+    set({ user: null, accounts })
+  },
   signOut: () => {
     try { localStorage.removeItem(KEY) } catch { /* storage blocked */ }
     set({ user: null })

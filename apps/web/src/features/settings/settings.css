@@ -1,0 +1,55 @@
+/* Settings layout */
+.settings { display: grid; grid-template-columns: 12rem minmax(0, 46rem); gap: 48px; align-items: start; }
+.settings-nav { position: sticky; top: 96px; display: grid; gap: 2px; }
+.settings-nav a { padding: 8px 12px; border-radius: var(--radius-md); color: var(--color-text-muted); font-size: 0.875rem; font-weight: 500; text-decoration: none; }
+.settings-nav a.is-active { background: var(--color-surface-2); color: var(--color-text); font-weight: 600; }
+@media (hover: hover) and (pointer: fine) { .settings-nav a:hover { color: var(--color-text); } }
+.settings-content { display: grid; gap: 24px; }
+.settings-content > * + * { margin-top: 0; }
+.set-section { scroll-margin-top: 96px; }
+.set-section--danger { border-color: color-mix(in srgb, var(--color-danger) 35%, transparent); }
+.set-section--danger .panel__title { color: var(--color-danger); }
+
+.set-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 24px; border-top: 1px solid var(--color-border); }
+.set-row__text { min-width: 0; }
+.set-row__label { font-weight: 600; letter-spacing: -0.01em; }
+.set-row__desc { margin-top: 2px; font-size: 0.875rem; color: var(--color-text-muted); max-width: 46ch; }
+.set-row__control { flex: none; display: flex; align-items: center; gap: 8px; min-width: 9rem; justify-content: flex-end; }
+.set-row--stack { flex-direction: column; align-items: stretch; gap: 16px; }
+.set-row--stack .set-row__control { display: grid; justify-content: stretch; }
+.kbd { padding: 4px 8px; border: 1px solid var(--color-border-strong); border-bottom-width: 2px; border-radius: 6px; background: var(--color-surface); font-family: inherit; font-size: 0.8125rem; font-weight: 600; }
+
+.set-profile { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 24px; padding: 12px 24px 24px; border-top: 1px solid var(--color-border); }
+.set-profile__avatar { display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: var(--steel); color: var(--steel-text); font-size: 1.25rem; font-weight: 600; letter-spacing: -0.02em; }
+.set-profile__fields { display: grid; gap: 16px; }
+.set-profile__actions { display: flex; gap: 8px; }
+
+.set-sessions { display: grid; margin: 0; padding: 0; list-style: none; border: 1px solid var(--color-border); border-radius: var(--radius-md); }
+.set-sessions__row { display: flex; align-items: center; gap: 16px; padding: 12px 16px; }
+.set-sessions__row + .set-sessions__row { border-top: 1px solid var(--color-border); }
+.set-sessions__row > div { flex: 1; min-width: 0; }
+.set-sessions__row > svg { color: var(--color-text-muted); flex: none; }
+
+@media (max-width: 899px) {
+  .settings { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .settings-nav { display: none; }
+  .set-row { gap: 16px; padding: 14px 16px; }
+  .set-row__control { min-width: 0; }
+  .set-profile { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 8px 16px 20px; }
+  .set-profile__avatar { width: 56px; height: 56px; }
+}
+@media (max-width: 560px) { .set-row:not(.set-row--stack) .select { min-width: 8rem; } }
+
+/* App-wide effects of the Appearance settings */
+html[data-density='compact'] .row { padding-block: 8px; min-height: 52px; }
+html[data-density='compact'] .panel__head { padding-top: 14px; }
+@media (pointer: fine) { html[data-density='compact'] .btn { min-height: 36px; } }
+html[data-density='compact'] .input, html[data-density='compact'] .select { min-height: 40px; }
+html[data-density='compact'] .app-shell__main { padding-top: 16px; }
+html[data-density='compact'] .item-card__main { padding: 14px; }
+html[data-density='compact'] .set-row { padding-block: 10px; }
+html[data-density='compact'] .tl-card { padding-block: 8px; }
+html[data-density='compact'] .nav-link { min-height: 36px; }
+html[data-motion='reduced'] *, html[data-motion='reduced'] *::before, html[data-motion='reduced'] *::after {
+  animation-duration: 0.01ms !important; animation-delay: 0s !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important;
+}
